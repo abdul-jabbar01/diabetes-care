@@ -8,7 +8,7 @@ public class Start {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					new Main();
+					new view.Start();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
