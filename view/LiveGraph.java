@@ -14,7 +14,6 @@ import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.data.time.Day;
 import org.jfree.data.time.Hour;
-import org.jfree.data.time.Millisecond;
 import org.jfree.data.time.Minute;
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
@@ -126,7 +125,6 @@ public class LiveGraph extends JFrame implements ActionListener {
 			int minute=Integer.parseInt(this.simulation.timeList.get(this.index).split(":")[1]);
 
 
-			this.series.add(new Minute(minute, hour), (int) currentBGL);
 			this.series.add(new Minute(minute, hour), (int) currentBGL);
 			this.injectedSeries.add(new Minute(minute, hour), currentInjectedBGL);
 			this.lowerLimitSeries.add(new Minute(minute, hour),80);
