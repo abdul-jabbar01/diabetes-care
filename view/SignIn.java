@@ -131,11 +131,12 @@ public class SignIn {
 					}
 					else if(userDetails.getUserType().equals("Doctor")) {
 						new MainScreenDoctor(userDetails);
-
 					}
+					
 					else if(userDetails.getUserType().equals("Nurse")) {
-						new MainScreen(userDetails);
+						new MainScreenNurse(userDetails);
 					}
+					
 					else if(userDetails.getUserType().equals("Care taker")) {
 						new MainScreen(userDetails);
 					}
