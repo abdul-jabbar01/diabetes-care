@@ -1,7 +1,7 @@
-# diabetes-care
+# Diabetes-Care
 Insulin and Glucagon Pump Simulation
 
-## Simulation
+# Simulation
 
 Simulation screen of the Insulin/Glucagon pump will ask the user to enter the parameters for the simulation. Following parameters needs to set for running the simulation:
 - **Blood Glucose Level** at start of the simulation
