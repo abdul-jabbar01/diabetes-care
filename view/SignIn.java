@@ -137,8 +137,8 @@ public class SignIn {
 						new MainScreenNurse(userDetails);
 					}
 					
-					else if(userDetails.getUserType().equals("Care taker")) {
-						new MainScreen(userDetails);
+					else if(userDetails.getUserType().equals("Care Taker")) {
+						new MainScreenCareTaker(userDetails);
 					}
 
 					frame.dispose();
