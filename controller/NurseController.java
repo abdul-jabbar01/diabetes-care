@@ -4,13 +4,10 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Vector;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.DoctorModel;
 import model.NurseModel;
 import model.PatientModel;
 import model.UserModel;
-import view.MainScreenDoctor;
 import view.MainScreenNurse;
 
 public class NurseController {
