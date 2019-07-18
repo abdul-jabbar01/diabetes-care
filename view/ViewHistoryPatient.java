@@ -3,9 +3,14 @@ package view;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
+
 import controller.BasicController;
 import controller.PatientController;
 import controller.UserController;
@@ -23,7 +28,6 @@ public class ViewHistoryPatient {
 	UserController userObj;
 	private JTable tableHistory;
 	int patientId;
-
 
 	// Parameterized Constructor
 	public ViewHistoryPatient(int patientId) {
@@ -92,7 +96,22 @@ public class ViewHistoryPatient {
 
 		try {
 			tableHistory = new JTable(new PatientController().getPatientHistory(this.patientId));
+			tableHistory.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 			tableHistory.setBorder(null);
+			
+			    final TableColumnModel columnModel = tableHistory.getColumnModel();
+			    for (int column = 0; column < tableHistory.getColumnCount(); column++) {
+			        int width = 15; // Min width
+			        for (int row = 0; row < tableHistory.getRowCount(); row++) {
+			            TableCellRenderer renderer = tableHistory.getCellRenderer(row, column);
+			            Component comp = tableHistory.prepareRenderer(renderer, row, column);
+			            width = Math.max(comp.getPreferredSize().width +1 , width);
+			        }
+			        if(width > 300)
+			            width=300;
+			        columnModel.getColumn(column).setPreferredWidth(width);
+			    }
+			
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
@@ -104,13 +123,18 @@ public class ViewHistoryPatient {
 
 		JLabel lblTime = new JLabel("Time");
 		lblTime.setFont(new Font("Lucida Grande", Font.BOLD, 14));
-		lblTime.setBounds(10, 60, 61, 16);
+		lblTime.setBounds(90, 60, 61, 16);
 		panel_2.add(lblTime);
 
 		JLabel lblBglValue = new JLabel("BGL Value");
 		lblBglValue.setFont(new Font("Lucida Grande", Font.BOLD, 14));
-		lblBglValue.setBounds(270, 60, 83, 16);
+		lblBglValue.setBounds(265, 60, 83, 16);
 		panel_2.add(lblBglValue);
+		
+		JLabel lblInjectedUnits = new JLabel("Injected Units");
+		lblInjectedUnits.setFont(new Font("Lucida Grande", Font.BOLD, 14));
+		lblInjectedUnits.setBounds(365, 61, 107, 16);
+		panel_2.add(lblInjectedUnits);
 
 		frame.setVisible(true);
 	}

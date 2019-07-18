@@ -97,7 +97,7 @@ public class PatientModel {
 
 	//Get the patient history
 	public ResultSet getPatientHistory(int patientId) {
-		return dbObject.select("SELECT  `time` as Time,  `bglValue` as BGL FROM `patientHistory` WHERE patientId="+patientId);
+		return dbObject.select("SELECT  `time` as Time,  `bglValue` as BGL, injectedUnits  FROM `patientHistory` "); //WHERE patientId="+patientId);
 	}
 
 }

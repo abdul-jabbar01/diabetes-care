@@ -80,6 +80,7 @@ public class PatientController {
 		
 		columnNames.add("Time");
 		columnNames.add("BGL Value");
+		columnNames.add("Injected Units");
 
 		// data of the table
 		Vector<Vector<Object>> data = new Vector<Vector<Object>>();
