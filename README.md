@@ -2,10 +2,22 @@
 
 Insulin and Glucagon Pump Simulation
 
+<!--ts-->
+   * [Introduction](#introduction)
+   * [ Installation ](#setup-guide)
+   * [ Simulation](#simulation)
+   * [ Live.](#live)
+      * [ Patient Portal](#patient-portal)
+      * [ Doctor Portal](#doctor-portal)
+<!--te-->
+   
+<a name="introduction"></a>
+## Introduction
 This project has basically two parts.
 - **Simulation** that just takes input some parameters and run the simulation of Blood Glucose Level over the time
 - **Live** that contains the complete implementation i.e.  signup/signin of the doctor/patient/nurse/care taker and everybody has their own portal with restricted privliges
 
+<a name="setup-guide"></a>
 ### How to setup this project on your machine
 
 If you are using **Windows** then install the following Softwares:
@@ -30,6 +42,7 @@ You are just one step behind the installation. Now, you need to set the database
 
 All Set. Just run the Start.java file and you should be able to see the Main Screen. 
 
+<a name="simulation"></a>
 # Simulation
 
 Simulation screen of the Insulin/Glucagon pump will ask the user to enter the parameters for the simulation. Following parameters needs to set for running the simulation:
@@ -44,6 +57,7 @@ Simulation screen of the Insulin/Glucagon pump will ask the user to enter the pa
 The resultant Graph will be as follow:
 ![](screenshots/simulation-2.png)
 
+<a name="live"></a>
 # Live
 
 Following is the main screen where user can select the mode of the project (simulation or live) : 
@@ -57,7 +71,7 @@ Signup screen will be look like as following:
 
 Signin screen will be look like as following:
 ![](screenshots/signin.png)
-
+<a name="patient-portal"></a>
 ## Patient Portal
 
 When patient will login into the portal for the very first time. Following screen will be shown to the patient in which he will be asked to request the doctor to configure the device. 
@@ -73,7 +87,7 @@ Patient can view the configuration of device. And can also set his/her food rout
 If the patient's device is configured successfully. Then the patient's screen will be as following:
 ![](screenshots/patient-main-screen.png)
 
-
+<a name="doctor-portal"></a>
 ## Doctor Panel
 
 Doctor's main screen contains two tables. 
