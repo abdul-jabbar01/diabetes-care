@@ -6,6 +6,30 @@ This project has basically two parts.
 - **Simulation** that just takes input some parameters and run the simulation of Blood Glucose Level over the time
 - **Live** that contains the complete implementation i.e.  signup/signin of the doctor/patient/nurse/care taker and everybody has their own portal with restricted privliges
 
+### How to setup this project on your machine
+
+If you are using **Windows** then install the following Softwares:
+- XAMPP can install by following [this](https://pureinfotech.com/install-xampp-windows-10/) guide. 
+- Eclipse can be installed from [here](https://www.eclipse.org/downloads/)
+
+
+And if you are using **MacOS** then install the following softwares:
+- MAMP can be installed by following [this](https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/) guide
+- Eclipse can be installed from [here](https://www.eclipse.org/downloads/)
+
+
+After the successfull installation of softwares, Run the eclipse
+
+Then import the project into eclipse
+Click on ```File``` -> ```Open Projects from File System``` -> ```select project folder where Start.Java is located```
+
+Our sample exported database is located in ```database/d-care.sql```
+So, import this database file into XAMPP/MAMP
+
+You are just one step behind the installation. Now, you need to set the database configuration (database name/ username/password/) in ```model/Database.java```
+
+All Set. Just run the Start.java file and you should be able to see the Main Screen. 
+
 # Simulation
 
 Simulation screen of the Insulin/Glucagon pump will ask the user to enter the parameters for the simulation. Following parameters needs to set for running the simulation:
